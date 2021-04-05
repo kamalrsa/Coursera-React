@@ -1,16 +1,5 @@
-import React, { useState } from "react";
-//import { Media } from "reactstrap";
-import {
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardText,
-  CardBody,
-  CardTitle,
-} from "reactstrap";
-export default function Menu(props) {
-  console.log(props);
-  const [dishes, setDishes] = useState([
+export default function Dishes() {
+  const Dishes = [
     {
       id: 0,
       name: "Uthappizza",
@@ -51,34 +40,5 @@ export default function Menu(props) {
       description:
         "A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms",
     },
-  ]);
-  console.log(dishes);
-
-  return (
-    <>
-      {dishes?.map((item, key) => (
-        <div key={item.id}>
-          <div className="col-12 col-md-8 m-5">
-            <Card>
-              <CardImg
-                width="100px"
-                height="300px"
-                top
-                src={item.image}
-                alt={item.name}
-              />
-
-              <CardBody>
-                <CardTitle>{item.name}</CardTitle>
-                <CardText>{item.description}</CardText>
-              </CardBody>
-              <CardImgOverlay>
-                <CardTitle>{item.name}</CardTitle>
-              </CardImgOverlay>
-            </Card>
-          </div>
-        </div>
-      ))}
-    </>
-  );
+  ];
 }
